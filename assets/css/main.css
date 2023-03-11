@@ -1,0 +1,185 @@
+body {
+  font-family: sans-serif, "Red Hat Display", "Jost";
+  scroll-behavior: smooth;
+}
+
+:root {
+  --color-primary1: #212529;
+  --color-primary2: #343a40;
+  --text-color: #fff;
+  --sub-text-color: #3f3f3f;
+  --smooth: 0.3s all ease-in;
+}
+
+a {
+  text-decoration: none;
+}
+
+.input-group {
+  max-width: 500px;
+}
+
+@media (min-width: 732px) {
+  .input-group {
+    min-width: 450px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .input-group {
+    min-width: 650px;
+  }
+}
+
+/* dropdown */
+.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0; /* remove the gap so it doesn't close */
+}
+
+/* ================ Reset CSS =================*/
+.selector-for-some-widget {
+  box-sizing: content-box;
+}
+
+/* =================== header ================= */
+header {
+  clear: both;
+  background: var(--text-color);
+}
+
+.navbar-sub-brand span {
+  margin-left: -5px;
+}
+
+.left-content .navbar-nav .nav-item .nav-link {
+  font-size: 0.8rem;
+  color: var(--color-primary1);
+}
+
+@media (max-width: 567px) {
+  .navbar-brand,
+  .left-content {
+    display: none;
+  }
+}
+
+.horizonal-scroll {
+  overflow: auto;
+  white-space: nowrap;
+}
+
+.horizonal-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.horizonal-scroll ul li {
+  display: inline-block;
+  text-align: center;
+  padding: 3px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  background: var(--color-primary1);
+}
+
+.horizonal-scroll ul li a {
+  color: var(--text-color);
+}
+
+.nav-link.active {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+/* ============ Button effect =================== */
+.btn-shiny-effect {
+  position: relative;
+  padding: 5px 15px;
+  color: var(--text-color);
+  background: var(--color-primary1);
+  border: 1px solid var(--color-primary1);
+  border-radius: 4px;
+  outline: none;
+  overflow: hidden;
+  transition: var(--smooth);
+}
+
+.btn-shiny-effect:hover {
+  background: transparent;
+  color: var(--color-primary1);
+  border: 1px solid var(--color-primary1);
+}
+
+.btn-shiny-effect::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--text-color),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.btn-shiny-effect:hover::before {
+  left: 100%;
+}
+
+/* ============= Card video =============== */
+.card,
+.card-img-top {
+  width: 100%;
+  min-width: 284px;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.card-footer {
+  background: var(--text-color);
+}
+
+.desc-title,
+.sub-desc {
+  clear: both;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.new-video {
+  width: 100%;
+  aspect-ratio: 16.9;
+}
+
+/* =============== pagination =============== */
+.listPage {
+  padding: 5px;
+  text-align: center;
+  list-style: none;
+}
+.listPage li {
+  background-color: #ffffffbd;
+  padding: 5px 15px;
+  border: 1px solid var(--color-primary1);
+  border-radius: 5px;
+  display: inline-block;
+  margin: 0 10px;
+  cursor: pointer;
+}
+.listPage .active {
+  background-color: var(--color-primary1);
+  color: var(--text-color);
+}
+
+/* =================Footer ==================== */
+footer {
+  clear: both;
+  position: relative;
+  bottom: 0;
+  margin-top: 200px;
+}

@@ -1,0 +1,8 @@
+body{
+  width: 100wh;
+  height: 100vh;
+}
+
+.left-sidebar{
+  min-height: 100vh;
+}

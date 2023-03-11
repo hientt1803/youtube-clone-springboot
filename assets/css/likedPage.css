@@ -1,0 +1,19 @@
+.liked-video-description {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.6),
+    rgba(0, 0, 0, 0.5)
+  );
+}
+
+.left-liked-video{
+    height: 100vh;
+    margin-bottom: 50px;
+}
+
+@media (max-width: 578px) {
+    .left-liked-video{
+        height: 25vh;
+        margin-bottom: 50px;
+    }
+}

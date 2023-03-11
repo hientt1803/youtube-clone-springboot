@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chi tiết video</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css" />
+
+    <!-- Font awesome -->
+    <script
+      src="https://kit.fontawesome.com/c0f581682c.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/detailPage.css" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <!-- Header -->
+      <header class="sticky-top">
+        <nav class="navbar navbar-expand-sm">
+          <div class="container-fluid">
+            <a class="navbar-brand fs-4" href="/index.html">
+              <i class="fa-solid fa-bars mx-auto"></i>
+            </a>
+            <button
+              class="navbar-toggler d-lg-none"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapsibleNavId"
+              aria-controls="collapsibleNavId"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+              <ul class="navbar-nav mt-2 mt-lg-0">
+                <li class="nav-item">
+                  <a
+                    class="nav-link text-dark navbar-sub-brand fs-4"
+                    href="/index.html"
+                    aria-current="page"
+                    ><i class="fa-brands fa-vimeo-v"></i> <span> ideo.</span>
+                  </a>
+                </li>
+              </ul>
+
+              <!-- center nav -->
+              <form class="d-flex mt-2 my-lg-0 mx-auto">
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Tìm kiếm"
+                    aria-label="Tìm kiếm"
+                    aria-describedby="input-group-search"
+                  />
+                  <span
+                    class="input-group-text bg-transparent"
+                    id="input-group-search"
+                  >
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </span>
+                </div>
+                <span class="my-auto ms-2">
+                  <a href="#">
+                    <i class="fa-solid fa-microphone text-dark fs-4"></i>
+                  </a>
+                </span>
+              </form>
+
+              <!-- right nav -->
+              <div class="mt-4 ms-auto">
+                <ul
+                  class="nav-list d-flex justify-content-center list-unstyled"
+                >
+                  <!-- item -->
+                  <li class="nav-item fs-5">
+                    <a href="#" class="nav-link">
+                      <i class="fa-regular fa-bell"></i>
+                    </a>
+                  </li>
+
+                  <!-- item -->
+                  <li class="nav-item dropstart">
+                    <a
+                      class="nav-link fs-5 ms-4"
+                      href="#"
+                      id="dropdownId"
+                      data-bs-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                      ><i class="fa-regular fa-circle-user"></i
+                    ></a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownId">
+                      <a class="dropdown-item" href="#">Dashboard</a>
+                      <hr class="dropdown-divider" />
+                      <a class="dropdown-item" href="#">Đăng nhập</a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <!-- Main concept -->
+      <main>
+        <div class="row">
+          <div class="col-xl-8 col-lg-8 col-md-7 col-sm-12">
+            <!-- iframe -->
+            <iframe
+              class="w-100 rounded-3 video-details-iframe"
+              height="500"
+              src="https://www.youtube.com/embed/PEM0Vs8jf1w"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+
+            <!-- Video discription  -->
+            <div class="video-detail text-dark">
+              <!-- Video title -->
+              <h4 class="video-title fs-4">
+                JVKE - golden hour (oficial music video)
+              </h4>
+              <!-- Video control -->
+              <div
+                class="vidieo-control d-flex justify-content-between flex-wrap"
+              >
+                <div class="author-control d-flex gap-3 column-gap-sm-3">
+                  <div class="author-avatar my-auto">
+                    <i class="fa-regular fa-bell"></i>
+                  </div>
+                  <div class="author-control d-inline-block">
+                    <div class="author-control-name">JVKE</div>
+                    <div class="author-control-registerd">
+                      10N người đăng ký
+                    </div>
+                  </div>
+                  <button class="sign-up btn btn-shiny-effect ms-3">
+                    Đăng ký
+                  </button>
+                </div>
+                <div class="video-control-like-share">
+                  <button class="btn btn-shiny-effect m-0 btn-like">
+                    Like
+                  </button>
+                  <button class="btn btn-shiny-effect m-0 btn-share">
+                    share
+                  </button>
+                </div>
+              </div>
+
+              <!-- Video desscription -->
+              <div class="accordion" id="video-description">
+                <div class="accordion-item bg-dark border-0">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button
+                      class="accordion-button text-white rounded-3 my-3 bg-dark btn-outline-dark"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseOne"
+                      aria-expanded="true"
+                      aria-controls="collapseOne"
+                    >
+                      1,6 Tr lượt xem <span class="ms-5">5 tháng trước</span>
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseOne"
+                    class="accordion-collapse text-white rounded-3 border-0 collapse"
+                    aria-labelledby="headingOne"
+                    data-bs-parent="#video-description"
+                  >
+                    <div class="accordion-body">
+                      This is the first item's accordion body.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Video comment -->
+            <p class="text-center my-3">
+              Tính năng bình luận đã bị tắt. <a href="#">Tìm hiểu thêm</a>
+            </p>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-5 col-sm-12">
+            <!-- new video -->
+            <div class="row">
+              <!-- Item -->
+              <div class="col-12">
+                <div class="card mb-3" style="max-width: 540px">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <iframe
+                        class="new-video"
+                        src="https://www.youtube.com/embed/tmdskwhrMKg"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                      ></iframe>
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title">Golden hourse - JVKE</h5>
+                        <p class="card-text d-flex flex-column">
+                          <span class="text-dark-emphasis"> JKVE</span>
+                          <span
+                            >1,4 Tr lượt xem
+                            <span class="ms-3">4 tháng trước</span></span
+                          >
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+
+  <!-- Bootstrap -->
+  <script src="/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom JS -->
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chi tiết video</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css" />
+
+    <!-- Font awesome -->
+    <script
+      src="https://kit.fontawesome.com/c0f581682c.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/likedPage.css" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <!-- Header -->
+      <header class="sticky-top">
+        <nav class="navbar navbar-expand-sm">
+          <div class="container-fluid">
+            <a class="navbar-brand fs-4" href="/index.html">
+              <i class="fa-solid fa-bars mx-auto"></i>
+            </a>
+            <button
+              class="navbar-toggler d-lg-none"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapsibleNavId"
+              aria-controls="collapsibleNavId"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+              <ul class="navbar-nav mt-2 mt-lg-0">
+                <li class="nav-item">
+                  <a
+                    class="nav-link text-dark navbar-sub-brand fs-4"
+                    href="/index.html"
+                    aria-current="page"
+                    ><i class="fa-brands fa-vimeo-v"></i> <span> i.</span>
+                  </a>
+                </li>
+              </ul>
+
+              <!-- center nav -->
+              <form class="d-flex mt-2 my-lg-0 mx-auto">
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Tìm kiếm"
+                    aria-label="Tìm kiếm"
+                    aria-describedby="input-group-search"
+                  />
+                  <span
+                    class="input-group-text bg-transparent"
+                    id="input-group-search"
+                  >
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </span>
+                </div>
+                <span class="my-auto ms-2">
+                  <a href="#">
+                    <i class="fa-solid fa-microphone text-dark fs-4"></i>
+                  </a>
+                </span>
+              </form>
+
+              <!-- right nav -->
+              <div class="mt-4 ms-auto">
+                <ul
+                  class="nav-list d-flex justify-content-center list-unstyled"
+                >
+                  <!-- item -->
+                  <li class="nav-item fs-5">
+                    <a href="#" class="nav-link">
+                      <i class="fa-regular fa-bell"></i>
+                    </a>
+                  </li>
+
+                  <!-- item -->
+                  <li class="nav-item dropstart">
+                    <a
+                      class="nav-link fs-5 ms-4"
+                      href="#"
+                      id="dropdownId"
+                      data-bs-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                      ><i class="fa-regular fa-circle-user"></i
+                    ></a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownId">
+                      <a class="dropdown-item" href="adminPage.html">Dashboard</a>
+                      <hr class="dropdown-divider" />
+                      <a class="dropdown-item" href="#">Đăng nhập</a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <!-- Main concept -->
+      <main>
+        <div class="row">
+          <!-- Left aside -->
+          <div class="col-lg-1 col-md-1 col-sm-12">
+            <nav class="navbar left-content">
+              <ul class="nav navbar-nav text-center">
+                <li class="nav-item fw-semibold">
+                  <a
+                    class="nav-link d-flex flex-column"
+                    href="#"
+                    aria-current="page"
+                  >
+                    <i class="fa-solid fa-house mx-auto"></i>
+                    Trang chủ
+                  </a>
+                </li>
+                <li class="nav-item fw-semibold my-3 d-flex flex-column">
+                  <i class="fa-regular fa-heart mx-auto"></i>
+                  <a class="nav-link" href="#">Video đã thích</a>
+                </li>
+                <li class="nav-item fw-semibold mb-3 d-flex flex-column">
+                  <i class="fa-solid fa-arrow-rotate-left mx-auto"></i>
+                  <a class="nav-link" href="#">Video đã xem</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <!-- article -->
+          <div class="col-lg-11 col-md-11 col-sm-12">
+            <div class="row">
+              <!-- left aside -->
+              <div class="col-lg-5 col-md-5 col-sm-5 liked-video-description">
+                <div class="container left-liked-video p-3">
+                  <div class="card text-start bg-transparent border-0">
+                    <img
+                      class="card-img-top"
+                      src="holder.js/100px180/"
+                      alt="first video here"
+                    />
+                    <div class="card-body">
+                      <h4 class="card-title">Video đã thích</h4>
+                      <p class="card-text">Hiến Trần</p>
+                      <p class="card-text">
+                        22 video <span class="ms-2">0 lượt xem</span>
+                        <span class="ms-2">Upload Yesterday</span>
+                      </p>
+                    </div>
+                    <div class="card-footer bg-transparent border-0">
+                      <button class="btn btn-shiny-effect">Phát tất cả</button>
+                      <button class="btn btn-shiny-effect">Trộn bài</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- right article -->
+              <div class="col-lg-7 col-md-7 col-sm-7 my-sm-3">
+                <!-- new video -->
+                <div class="row">
+                  <!-- Item -->
+                  <div class="col-12">
+                    <div class="card mb-3 my-3" style="max-width: 540px">
+                      <div class="row g-0">
+                        <div class="col-md-4">
+                          <iframe
+                            class="new-video"
+                            src="https://www.youtube.com/embed/tmdskwhrMKg"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen
+                            style="width: 100%; aspect-ratio: 16.9"
+                          ></iframe>
+                        </div>
+                        <div class="col-md-8">
+                          <div class="card-body">
+                            <h5 class="card-title">Golden hourse - JVKE</h5>
+                            <p class="card-text d-flex flex-column">
+                              <span class="text-dark-emphasis"> JKVE</span>
+                              <span
+                                >1,4 Tr lượt xem
+                                <span class="ms-3">4 tháng trước</span></span
+                              >
+                            </p>
+                          </div>
+                          <div class="card-footer">
+                            <button class="btn btn-shiny-effect">Unilke</button>
+                            <button class="btn btn-shiny-effect">share</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+
+  <!-- Bootstrap -->
+  <script src="/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom JS -->
+</html>
