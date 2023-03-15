@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang chủ</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css" />
+
+    <!-- Font awesome -->
+    <script
+      src="https://kit.fontawesome.com/c0f581682c.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/main.css" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <!-- Header -->
+      <header class="sticky-top">
+        <nav class="navbar navbar-expand-sm">
+          <div class="container-fluid">
+            <a class="navbar-brand fs-4" href="#">
+              <i class="fa-solid fa-bars mx-auto"></i>
+            </a>
+            <button
+              class="navbar-toggler d-lg-none"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapsibleNavId"
+              aria-controls="collapsibleNavId"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+              <ul class="navbar-nav mt-2 mt-lg-0">
+                <li class="nav-item">
+                  <a
+                    class="nav-link text-dark navbar-sub-brand fs-4"
+                    href="../index.html"
+                    aria-current="page"
+                    ><i class="fa-brands fa-vimeo-v"></i>
+                  </a>
+                </li>
+              </ul>
+
+              <!-- center nav -->
+              <form class="d-flex mt-2 my-lg-0 mx-auto">
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Tìm kiếm"
+                    aria-label="Tìm kiếm"
+                    aria-describedby="input-group-search"
+                  />
+                  <span
+                    class="input-group-text bg-transparent"
+                    id="input-group-search"
+                  >
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </span>
+                </div>
+                <span class="my-auto ms-2">
+                  <a href="../index.html">
+                    <i class="fa-solid fa-microphone text-dark fs-4"></i>
+                  </a>
+                </span>
+              </form>
+
+              <!-- right nav -->
+              <div class="mt-4 ms-auto">
+                <ul
+                  class="nav-list d-flex justify-content-center list-unstyled"
+                >
+                  <!-- item -->
+                  <li class="nav-item fs-5">
+                    <a href="#" class="nav-link">
+                      <i class="fa-regular fa-bell"></i>
+                    </a>
+                  </li>
+
+                  <!-- item -->
+                  <li class="nav-item dropstart">
+                    <a
+                      class="nav-link fs-5 ms-4"
+                      href="#"
+                      id="dropdownId"
+                      data-bs-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                      ><i class="fa-regular fa-circle-user"></i
+                    ></a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownId">
+                      <a class="dropdown-item" href="views/adminPage.html"
+                        >Dashboard</a
+                      >
+                      <hr class="dropdown-divider" />
+                      <a
+                        class="dropdown-item"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#LoginOffcanva"
+                        aria-controls="LoginOffcanva"
+                        >Đăng nhập</a
+                      >
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <!-- Main concept -->
+      <main>
+        <nav>
+          <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <button
+              class="nav-link active"
+              id="nav-home-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#nav-home"
+              type="button"
+              role="tab"
+              aria-controls="nav-home"
+              aria-selected="true"
+            >
+              Cập nhật tài khoản
+            </button>
+            <button
+              class="nav-link"
+              id="nav-profile-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#nav-profile"
+              type="button"
+              role="tab"
+              aria-controls="nav-profile"
+              aria-selected="false"
+            >
+              Đổi mật khẩu
+            </button>
+            <button
+              class="nav-link"
+              id="nav-contact-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#nav-contact"
+              type="button"
+              role="tab"
+              aria-controls="nav-contact"
+              aria-selected="false"
+            >
+              Quên mật khẩu
+            </button>
+          </div>
+        </nav>
+        <div class="tab-content my-3" id="nav-tabContent">
+          <!-- Profile -->
+          <div
+            class="tab-pane fade show active"
+            id="nav-home"
+            role="tabpanel"
+            aria-labelledby="nav-home-tab"
+            tabindex="0"
+          >
+            <form action="#" novalidate>
+              <div class="row">
+                <div class="col-6">
+                  <div class="mb-3">
+                    <label for="username" class="form-label fw-bold"
+                      >Tên tài khoản</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="username"
+                      id="username"
+                      aria-describedby="usernameHelp"
+                      placeholder="TeoNV?"
+                    />
+                    <small
+                      id="usernameHelp"
+                      class="form-text text-muted"
+                    ></small>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="mb-3">
+                    <label for="password" class="form-label fw-bold"
+                      >Mật khẩu</label
+                    >
+                    <input
+                      type="password"
+                      class="form-control"
+                      name="password"
+                      id="password"
+                      aria-describedby="passwordHelp"
+                      placeholder="*******?"
+                    />
+                    <small
+                      id="passwordHelp"
+                      class="form-text text-muted"
+                    ></small>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="mb-3">
+                    <label for="fullName" class="form-label fw-bold"
+                      >Họ và tên</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="fullName"
+                      id="fullName"
+                      aria-describedby="fullNameHelp"
+                      placeholder="Nguyễn Văn Tèo?"
+                    />
+                    <small
+                      id="fullNameHelp"
+                      class="form-text text-muted"
+                    ></small>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="mb-3">
+                    <label for="email" class="form-label fw-bold">Email</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="email"
+                      id="email"
+                      aria-describedby="emailHelp"
+                      placeholder="teonv@fpt.edu.vn?"
+                    />
+                    <small id="emailHelp" class="form-text text-muted"></small>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-shiny-effect">Cập nhật</button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <!-- Change password -->
+          <div
+            class="tab-pane fade"
+            id="nav-profile"
+            role="tabpanel"
+            aria-labelledby="nav-profile-tab"
+            tabindex="0"
+          >
+            <form action="#" novalidate>
+              <div class="row">
+                <div class="col-6">
+                  <div class="mb-3">
+                    <label for="username" class="form-label fw-bold"
+                      >Tên tài khoản</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="username"
+                      id="username"
+                      aria-describedby="usernameHelp"
+                      placeholder="TeoNV?"
+                    />
+                    <small
+                      id="usernameHelp"
+                      class="form-text text-muted"
+                    ></small>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="mb-3">
+                    <label for="password" class="form-label fw-bold"
+                      >Mật khẩu hiện tại</label
+                    >
+                    <input
+                      type="password"
+                      class="form-control"
+                      name="password"
+                      id="password"
+                      aria-describedby="passwordHelp"
+                      placeholder="*******"
+                    />
+                    <small
+                      id="passwordHelp"
+                      class="form-text text-muted"
+                    ></small>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="mb-3">
+                    <label for="newPassword" class="form-label fw-bold"
+                      >Mật khẩu mới</label
+                    >
+                    <input
+                      type="password"
+                      class="form-control"
+                      name="newPassword"
+                      id="newPassword"
+                      aria-describedby="newPasswordHelp"
+                      placeholder="*******"
+                    />
+                    <small
+                      id="newPasswordHelp"
+                      class="form-text text-muted"
+                    ></small>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="mb-3">
+                    <label for="confirmPassword" class="form-label fw-bold"
+                      >Xác nhận mật khẩu</label
+                    >
+                    <input
+                      type="password"
+                      class="form-control"
+                      name="confirmPassword"
+                      id="confirmPassword"
+                      aria-describedby="confirmPasswordHelp"
+                      placeholder="*******"
+                    />
+                    <small
+                      id="confirmPasswordHelp"
+                      class="form-text text-muted"
+                    ></small>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-shiny-effect">Đổi mật khẩu</button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <!-- Forgot Passsword -->
+          <div
+            class="tab-pane fade"
+            id="nav-contact"
+            role="tabpanel"
+            aria-labelledby="nav-contact-tab"
+            tabindex="0"
+          >
+            <form action="#" novalidate>
+              <div class="row">
+                <div class="col-6">
+                  <div class="mb-3">
+                    <label for="username" class="form-label fw-bold"
+                      >Tên tài khoản</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="username"
+                      id="username"
+                      aria-describedby="usernameHelp"
+                      placeholder="TeoNV?"
+                    />
+                    <small
+                      id="usernameHelp"
+                      class="form-text text-muted"
+                    ></small>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="mb-3">
+                    <label for="email" class="form-label fw-bold"
+                      >Email</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      name="email"
+                      id="email"
+                      aria-describedby="emailHelp"
+                      placeholder="TeoNV@fpt.edu.vn?"
+                    />
+                    <small
+                      id="emailHelp"
+                      class="form-text text-muted"
+                    ></small>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-shiny-effect">Lấy lại mật khẩu</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+
+  <!-- Bootstrap -->
+  <script src="../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom JS -->
+</html>

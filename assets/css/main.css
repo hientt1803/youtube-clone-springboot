@@ -1,5 +1,5 @@
 body {
-  font-family: sans-serif, "Red Hat Display", "Jost";
+  font-family: sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -13,6 +13,7 @@ body {
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 .input-group {

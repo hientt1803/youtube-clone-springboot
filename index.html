@@ -98,11 +98,26 @@
                       ><i class="fa-regular fa-circle-user"></i
                     ></a>
                     <div class="dropdown-menu" aria-labelledby="dropdownId">
+                      <a class="dropdown-item" href="views/profilePage.html"
+                        >Profile</a
+                      >
                       <a class="dropdown-item" href="views/adminPage.html"
                         >Dashboard</a
                       >
                       <hr class="dropdown-divider" />
-                      <a class="dropdown-item" href="#">Đăng nhập</a>
+                      <a
+                        class="dropdown-item"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#LoginOffcanva"
+                        aria-controls="LoginOffcanva"
+                        >Đăng nhập</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        data-bs-toggle="modal"
+                        data-bs-target="#registerModal"
+                        >Đăng ký</a
+                      >
                     </div>
                   </li>
                 </ul>
@@ -192,7 +207,10 @@
                       <a href="#" class="btn btn-shiny-effect fw-bold fs-6"
                         >like</a
                       >
-                      <a href="#" class="btn btn-shiny-effect fw-bold fs-6 ms-2"
+                      <a
+                        class="btn btn-shiny-effect fw-bold fs-6 ms-2"
+                        data-bs-toggle="modal"
+                        data-bs-target="#shareModal"
                         >share</a
                       >
                     </div>
@@ -208,10 +226,232 @@
       <div class="w-100 d-flex justify-content-center mt-5">
         <ul class="listPage list-unstyled d-flex"></ul>
       </div>
+
+      <!-- ====================== Modal - offcanvar section ========================= -->
+
+      <!-- ================== Modal -->
+      <!-- Share modal -->
+      <div
+        class="modal fade"
+        id="shareModal"
+        tabindex="-1"
+        aria-labelledby="shareModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5 fw-bold" id="shareModalLabel">
+                Send video to your friend.
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form action="#">
+                <div class="form-floating mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="shareFriendEmail"
+                    id="shareFriendEmail"
+                    placeholder="Your friend email?"
+                  />
+                  <label for="shareFriendEmail">Your friend email?</label>
+                </div>
+                <button class="btn btn-shiny-effect float-end">Share</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Register modal -->
+      <div
+        class="modal fade"
+        id="registerModal"
+        tabindex="-1"
+        aria-labelledby="registerModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fw-bold fs-5" id="registerModalLabel">
+                Đăng ký tài khoản
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form action="#" novalidate>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="mb-3">
+                      <label for="usernameRegister" class="form-label fw-bold"
+                        >Tên đăng nhập</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="usernameRegister"
+                        id="usernameRegister"
+                        aria-describedby="usernameRegisterHelp"
+                        placeholder="Nvteo?"
+                      />
+                      <small
+                        id="usernameRegisterHelp"
+                        class="form-text text-muted"
+                      ></small>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="mb-3">
+                      <label for="passwordRegister" class="form-label fw-bold"
+                        >Mật khẩu</label
+                      >
+                      <input
+                        type="password"
+                        class="form-control"
+                        name="passwordRegister"
+                        id="passwordRegister"
+                        aria-describedby="passwordRegisterHelp"
+                        placeholder="*********"
+                      />
+                      <small
+                        id="passwordRegisterHelp"
+                        class="form-text text-muted"
+                      ></small>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="mb-3">
+                      <label for="fullNameRegister" class="form-label fw-bold"
+                        >Họ và tên</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="fullNameRegister"
+                        id="fullNameRegister"
+                        aria-describedby="fullNameRegisterHelp"
+                        placeholder="Nguyễn Văn Tèo"
+                      />
+                      <small
+                        id="fullNameRegisterHelp"
+                        class="form-text text-muted"
+                      ></small>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="mb-3">
+                      <label for="emailRegister" class="form-label fw-bold"
+                        >Email</label
+                      >
+                      <input
+                        type="email"
+                        class="form-control"
+                        name="emailRegister"
+                        id="emailRegister"
+                        aria-describedby="emailRegisterHelp"
+                        placeholder="nvteo@gmail.com"
+                      />
+                      <small
+                        id="emailRegisterHelp"
+                        class="form-text text-muted"
+                      ></small>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <button class="btn btn-shiny-effect">Đăng ký</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================== Offcanvar -->
+      <!-- Login form -->
+      <div
+        class="offcanvas offcanvas-end"
+        data-bs-scroll="true"
+        tabindex="-1"
+        id="LoginOffcanva"
+        aria-labelledby="LoginOffcanvaLabel"
+      >
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title fw-bold" id="LoginOffcanvaLabel">
+            ĐĂNG NHẬP
+          </h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          <form action="#" novalidate>
+            <div class="mb-3">
+              <label for="loginName" class="form-label fw-bold fw-bold"
+                >Tên đăng nhập</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                name="loginName"
+                id="loginName"
+                aria-describedby="LoginNameHelp"
+                placeholder="Nguyenvanan"
+              />
+              <small id="LoginNameHelp" class="form-text text-muted"></small>
+            </div>
+            <div class="mb-3">
+              <label for="loginPassword" class="form-label fw-bold fw-bold"
+                >Mật khẩu</label
+              >
+              <input
+                type="password"
+                class="form-control"
+                name="loginPassword"
+                id="loginPassword"
+                aria-describedby="LoginPassHelp"
+                placeholder="*********"
+              />
+              <small id="LoginPassHelp" class="form-text text-muted"></small>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value="remember"
+                id="remember"
+              />
+              <label class="form-check-label" for="remember">
+                Ghi nhớ mật khẩu?
+              </label>
+            </div>
+            <button class="btn btn-shiny-effect my-3">Đăng nhập</button>
+          </form>
+          <p>
+            <a href="#" class="text-dark-emphasis"> Quên mật khẩu?</a>
+          </p>
+        </div>
+      </div>
     </div>
     <!-- footer -->
     <footer class="text-center bg-dark text-white p-1">
-      <!-- <p>&copy; 2023 by me.</p> -->
+      <p class="m-0 p-2">&copy; 2023, FPT Polytechnic CT.</p>
     </footer>
   </body>
 
