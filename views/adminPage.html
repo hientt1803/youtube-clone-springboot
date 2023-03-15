@@ -7,7 +7,7 @@
     <title>Admin Dashboard</title>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css" />
 
     <!-- Font awesome -->
     <script
@@ -22,164 +22,810 @@
     />
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/assets/css/admin.css" />
+    <link rel="stylesheet" href="../assets/css/admin.css" />
   </head>
   <body>
-    <div class="container-fluid">
-      <div class="row">
-        <!-- Lefft sidebar -->
-        <div class="col-lg-2 col-md-2 col-sm-0 bg-dark text-white left-sidebar">
-          <div
-            class="sidebar-logo d-flex justify-content-center align-items-center gap-2 mb-5"
-          >
-            <i class="fa-brands fa-viadeo fs-2"></i>
-            <p class="fs-3 align-self-end m-0 p-0">ATube</p>
+    <div class="sidebar close">
+      <!-- ========== Logo ============  -->
+      <a href="#" class="logo-box">
+        <i class="bx bxl-xing"></i>
+        <div class="logo-name text-monospace">H T U B E.</div>
+      </a>
+
+      <!-- ========== List ============  -->
+      <ul class="sidebar-list nav-tabs" id="dashboad" role="tablist">
+        <!-- -------- Non Dropdown List Item ------- -->
+        <li>
+          <div class="title">
+            <a href="../index.html" class="link">
+              <i class="bx bx-grid-alt"></i>
+              <span class="name">Trang chủ</span>
+            </a>
+            <!-- <i class='bx bxs-chevron-down'></i> -->
           </div>
-          <div class="sidebar-navbar">
-            <ul>
-              <li class="nav-item my-2 d-flex align-items-center gap-3">
-                <i class="fa-solid fa-play"></i>
-                <a href="#" class="nav-link">Danh sách video</a>
-              </li>
-              <li class="nav-item my-2 d-flex align-items-center gap-3">
-                <i class="fa-solid fa-user-gear"></i>
-                <a href="#" class="nav-link">Danh sách video</a>
-              </li>
-              <li class="nav-item my-2 d-flex align-items-center gap-3 mb-5">
-                <i class="fa-regular fa-star"></i>
-                <a href="#" class="nav-link">Danh sách video</a>
-              </li>
-              <hr class="divider mt-5" />
-              <li class="nav-item my-2 d-flex align-items-center gap-3">
-                <i class="fa-solid fa-gear"></i>
-                <a href="#" class="nav-link">Cài đặt</a>
-              </li>
-              <li class="nav-item my-2 d-flex align-items-center gap-3">
-                <i class="fa-solid fa-globe"></i>
-                <a href="#" class="nav-link">Trợ giúp</a>
-              </li>
-            </ul>
+          <div class="submenu">
+            <a href="../index.html" class="link submenu-title">Trang chủ</a>
+            <!-- submenu links here  -->
           </div>
-        </div>
-        <!-- right content -->
-        <div class="col-lg-10 col-md-10 col-sm-12 right-content">
-          <div class="nofication-nav shadow-sm p-2">
-              <div class="container d-flex justify-content-between">
-                  <div class="content-nofication-author">
-                    Xin chào, ...
-                  </div>
-                  <div class="content-nofication-title">
-                    <p class="fw-bold fs-3 m-0 p-0">Quản lý Video</p>
-                  </div>
-                  <div class="content-nofication-time">
-                    <p>00:00:00 AM</p>
-                  </div>
-              </div>
+        </li>
+
+        <!-- -------- Non Dropdown List Item ------- -->
+        <li class="nav-item" role="presentation">
+          <div class="title">
+            <button
+              class="nav-link nav-link-non-border m-0 p-0 active"
+              id="video-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#video-tab-panel"
+              type="button"
+              role="tab"
+              aria-controls="video-tab-panel"
+              aria-selected="true"
+            >
+              <i class="bx bx-street-view"></i>
+              <span class="name">Video</span>
+            </button>
+            <!-- <i class='bx bxs-chevron-down'></i> -->
           </div>
-          <div class="my-5">
-            <form class="row g-3 needs-validation" novalidate>
-              <div class="col-md-4">
-                <label for="validationCustom01" class="form-label"
-                  >First name</label
-                >
-                <input
-                  type="text"
-                  class="form-control"
-                  id="validationCustom01"
-                  value="Mark"
-                  required
-                />
-                <div class="valid-feedback">Looks good!</div>
-              </div>
-              <div class="col-md-4">
-                <label for="validationCustom02" class="form-label"
-                  >Last name</label
-                >
-                <input
-                  type="text"
-                  class="form-control"
-                  id="validationCustom02"
-                  value="Otto"
-                  required
-                />
-                <div class="valid-feedback">Looks good!</div>
-              </div>
-              <div class="col-md-4">
-                <label for="validationCustomUsername" class="form-label"
-                  >Username</label
-                >
-                <div class="input-group has-validation">
-                  <span class="input-group-text" id="inputGroupPrepend">@</span>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="validationCustomUsername"
-                    aria-describedby="inputGroupPrepend"
-                    required
-                  />
-                  <div class="invalid-feedback">Please choose a username.</div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <label for="validationCustom03" class="form-label">City</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="validationCustom03"
-                  required
-                />
-                <div class="invalid-feedback">Please provide a valid city.</div>
-              </div>
-              <div class="col-md-3">
-                <label for="validationCustom04" class="form-label">State</label>
-                <select class="form-select" id="validationCustom04" required>
-                  <option selected disabled value="">Choose...</option>
-                  <option>...</option>
-                </select>
-                <div class="invalid-feedback">Please select a valid state.</div>
-              </div>
-              <div class="col-md-3">
-                <label for="validationCustom05" class="form-label">Zip</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="validationCustom05"
-                  required
-                />
-                <div class="invalid-feedback">Please provide a valid zip.</div>
-              </div>
-              <div class="col-12">
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    value=""
-                    id="invalidCheck"
-                    required
-                  />
-                  <label class="form-check-label" for="invalidCheck">
-                    Agree to terms and conditions
-                  </label>
-                  <div class="invalid-feedback">
-                    You must agree before submitting.
-                  </div>
-                </div>
-              </div>
-              <div class="col-12">
-                <button class="btn btn-primary" type="submit">
-                  Submit form
-                </button>
-              </div>
-            </form>
+          <div class="submenu">
+            <a class="nav-link nav-link-non-border m-0 p-0 submenu-title"
+              >Video</a
+            >
+            <!-- submenu links here  -->
           </div>
+        </li>
+
+        <!-- -------- Non Dropdown List Item ------- -->
+        <li class="nav-item" role="presentation">
+          <div class="title">
+            <button
+              class="nav-link nav-link-non-border m-0 p-0"
+              id="user-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#users-tab-panel"
+              type="button"
+              role="tab"
+              aria-controls="users-tab-panel"
+              aria-selected="false"
+            >
+              <i class="bx bx-food-menu"></i>
+              <span class="name">Users</span>
+            </button>
+            <!-- <i class='bx bxs-chevron-down'></i> -->
+          </div>
+          <div class="submenu">
+            <a class="nav-link nav-link-non-border m-0 p-0 submenu-title"
+              >Users</a
+            >
+            <!-- submenu links here  -->
+          </div>
+        </li>
+
+        <!-- -------- Non Dropdown List Item ------- -->
+        <li class="nav-item" role="presentation">
+          <div class="title">
+            <button
+              class="nav-link nav-link-non-border m-0 p-0"
+              id="statistic-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#statistic-tab-panel"
+              type="button"
+              role="tab"
+              aria-controls="statistic-tab-panel"
+              aria-selected="false"
+            >
+              <i class="bx bx-food-menu"></i>
+              <span class="name">Statictis</span>
+            </button>
+            <!-- <i class='bx bxs-chevron-down'></i> -->
+          </div>
+          <div class="submenu">
+            <a class="nav-link nav-link-non-border m-0 p-0 submenu-title"
+              >Statictis</a
+            >
+            <!-- submenu links here  -->
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- ============= video-tab-panel Section =============== -->
+    <section class="video-tab-panel">
+      <div class="container">
+        <div
+          class="toggle-sidebar d-flex my-auto w-100 justify-content-between"
+        >
+          <i class="bx bx-menu"></i>
+          <span class="me-3">
+            <div id="clock">00:00:00 AM</div>
+          </span>
         </div>
       </div>
-    </div>
+
+      <div class="container">
+        <!-- Main concept -->
+        <main>
+          <div class="container my-5">
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <!-- Video tab -->
+              <div
+                class="tab-pane active"
+                id="video-tab-panel"
+                role="tabpanel"
+                aria-labelledby="video-tab"
+              >
+                <!-- Video content -->
+                <ul class="nav nav-tabs border-1" id="myTab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link active"
+                      id="video-content-edition-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#video-content-edition-tab-pane"
+                      type="button"
+                      role="tab"
+                      aria-controls="video-content-edition-tab-pane"
+                      aria-selected="true"
+                    >
+                      Video Edition
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link"
+                      id="video-list-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#video-list-tab-pane"
+                      type="button"
+                      role="tab"
+                      aria-controls="video-list-tab-pane"
+                      aria-selected="false"
+                    >
+                      Video List
+                    </button>
+                  </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                  <!-- Edition tab -->
+                  <div
+                    class="tab-pane fade show active my-3"
+                    id="video-content-edition-tab-pane"
+                    role="tabpanel"
+                    aria-labelledby="video-content-edition-tab"
+                    tabindex="0"
+                  >
+                    <!-- Content -->
+                    <form class="row g-3 needs-validation" novalidate>
+                      <div class="col-md-4">
+                        <label for="validationCustom01" class="form-label"
+                          >First name</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="validationCustom01"
+                          value="Mark"
+                          required
+                        />
+                        <div class="valid-feedback">Looks good!</div>
+                      </div>
+                      <div class="col-md-4">
+                        <label for="validationCustom02" class="form-label"
+                          >Last name</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="validationCustom02"
+                          value="Otto"
+                          required
+                        />
+                        <div class="valid-feedback">Looks good!</div>
+                      </div>
+                      <div class="col-md-4">
+                        <label for="validationCustomUsername" class="form-label"
+                          >Username</label
+                        >
+                        <div class="input-group has-validation">
+                          <span class="input-group-text" id="inputGroupPrepend"
+                            >@</span
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="validationCustomUsername"
+                            aria-describedby="inputGroupPrepend"
+                            required
+                          />
+                          <div class="invalid-feedback">
+                            Please choose a username.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="validationCustom03" class="form-label"
+                          >City</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="validationCustom03"
+                          required
+                        />
+                        <div class="invalid-feedback">
+                          Please provide a valid city.
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <label for="validationCustom04" class="form-label"
+                          >State</label
+                        >
+                        <select
+                          class="form-select"
+                          id="validationCustom04"
+                          required
+                        >
+                          <option selected disabled value="">Choose...</option>
+                          <option>...</option>
+                        </select>
+                        <div class="invalid-feedback">
+                          Please select a valid state.
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <label for="validationCustom05" class="form-label"
+                          >Zip</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="validationCustom05"
+                          required
+                        />
+                        <div class="invalid-feedback">
+                          Please provide a valid zip.
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="invalidCheck"
+                            required
+                          />
+                          <label class="form-check-label" for="invalidCheck">
+                            Agree to terms and conditions
+                          </label>
+                          <div class="invalid-feedback">
+                            You must agree before submitting.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <button class="btn btn-primary" type="submit">
+                          Submit form
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+
+                  <!-- Lisst tab -->
+                  <div
+                    class="tab-pane fade"
+                    id="video-list-tab-pane"
+                    role="tabpanel"
+                    aria-labelledby="video-list-tab"
+                    tabindex="0"
+                  >
+                    <div class="table-responsive">
+                      <table
+                        class="table table-striped table-hover table-borderless table-primary align-middle"
+                      >
+                        <thead class="table-light">
+                          <caption>
+                            Table Name
+                          </caption>
+                          <tr>
+                            <th>Column 1</th>
+                            <th>Column 2</th>
+                            <th>Column 3</th>
+                          </tr>
+                        </thead>
+                        <tbody class="table-group-divider">
+                          <tr class="table-primary">
+                            <td scope="row">Item</td>
+                            <td>Item</td>
+                            <td>Item</td>
+                          </tr>
+                          <tr class="table-primary">
+                            <td scope="row">Item</td>
+                            <td>Item</td>
+                            <td>Item</td>
+                          </tr>
+                        </tbody>
+                        <tfoot></tfoot>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Ussers Tab -->
+              <div
+                class="tab-pane"
+                id="users-tab-panel"
+                role="tabpanel"
+                aria-labelledby="user-tab"
+              >
+                <!-- users content -->
+                <ul class="nav nav-tabs border-1" id="myTab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link active"
+                      id="users-content-edition-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#users-content-edition-tab-pane"
+                      type="button"
+                      role="tab"
+                      aria-controls="users-content-edition-tab-pane"
+                      aria-selected="true"
+                    >
+                      Users Edition
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link"
+                      id="users-list-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#users-list-tab-pane"
+                      type="button"
+                      role="tab"
+                      aria-controls="users-list-tab-pane"
+                      aria-selected="false"
+                    >
+                      Users List
+                    </button>
+                  </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                  <!-- Edition tab -->
+                  <div
+                    class="tab-pane fade show active my-3"
+                    id="users-content-edition-tab-pane"
+                    role="tabpanel"
+                    aria-labelledby="users-content-edition-tab"
+                    tabindex="0"
+                  >
+                    <!-- Content -->
+                    <form class="row g-3 needs-validation" novalidate>
+                      <div class="col-md-4">
+                        <label for="validationCustom01" class="form-label"
+                          >First name</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="validationCustom01"
+                          value="Mark"
+                          required
+                        />
+                        <div class="valid-feedback">Looks good!</div>
+                      </div>
+                      <div class="col-md-4">
+                        <label for="validationCustom02" class="form-label"
+                          >Last name</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="validationCustom02"
+                          value="Otto"
+                          required
+                        />
+                        <div class="valid-feedback">Looks good!</div>
+                      </div>
+                      <div class="col-md-4">
+                        <label for="validationCustomUsername" class="form-label"
+                          >Username</label
+                        >
+                        <div class="input-group has-validation">
+                          <span class="input-group-text" id="inputGroupPrepend"
+                            >@</span
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="validationCustomUsername"
+                            aria-describedby="inputGroupPrepend"
+                            required
+                          />
+                          <div class="invalid-feedback">
+                            Please choose a username.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="validationCustom03" class="form-label"
+                          >City</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="validationCustom03"
+                          required
+                        />
+                        <div class="invalid-feedback">
+                          Please provide a valid city.
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <label for="validationCustom04" class="form-label"
+                          >State</label
+                        >
+                        <select
+                          class="form-select"
+                          id="validationCustom04"
+                          required
+                        >
+                          <option selected disabled value="">Choose...</option>
+                          <option>...</option>
+                        </select>
+                        <div class="invalid-feedback">
+                          Please select a valid state.
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <label for="validationCustom05" class="form-label"
+                          >Zip</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="validationCustom05"
+                          required
+                        />
+                        <div class="invalid-feedback">
+                          Please provide a valid zip.
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="invalidCheck"
+                            required
+                          />
+                          <label class="form-check-label" for="invalidCheck">
+                            Agree to terms and conditions
+                          </label>
+                          <div class="invalid-feedback">
+                            You must agree before submitting.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <button class="btn btn-primary" type="submit">
+                          Submit form
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+
+                  <!-- Lisst tab -->
+                  <div
+                    class="tab-pane fade"
+                    id="users-list-tab-pane"
+                    role="tabpanel"
+                    aria-labelledby="users-list-tab"
+                    tabindex="0"
+                  >
+                    <div class="table-responsive">
+                      <table
+                        class="table table-striped table-hover table-borderless table-primary align-middle"
+                      >
+                        <thead class="table-light">
+                          <caption>
+                            Table Name
+                          </caption>
+                          <tr>
+                            <th>Column 1</th>
+                            <th>Column 2</th>
+                            <th>Column 3</th>
+                          </tr>
+                        </thead>
+                        <tbody class="table-group-divider">
+                          <tr class="table-primary">
+                            <td scope="row">Item</td>
+                            <td>Item</td>
+                            <td>Item</td>
+                          </tr>
+                          <tr class="table-primary">
+                            <td scope="row">Item</td>
+                            <td>Item</td>
+                            <td>Item</td>
+                          </tr>
+                        </tbody>
+                        <tfoot></tfoot>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Statictis Tab -->
+              <div
+                class="tab-pane"
+                id="statistic-tab-panel"
+                role="tabpanel"
+                aria-labelledby="statistic-tab"
+              >
+                <!-- users content -->
+                <ul class="nav nav-tabs border-1" id="myTab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link active"
+                      id="favorites-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#favorites-tab-pane"
+                      type="button"
+                      role="tab"
+                      aria-controls="favorites-tab-pane"
+                      aria-selected="true"
+                    >
+                      Statistic Edition
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link"
+                      id="favorite-users-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#favorite-users-tab-pane"
+                      type="button"
+                      role="tab"
+                      aria-controls="favorite-users-tab-pane"
+                      aria-selected="false"
+                    >
+                      Statistic List
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link"
+                      id="share-friend-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#share-friend-tab-pane"
+                      type="button"
+                      role="tab"
+                      aria-controls="share-friend-tab-pane"
+                      aria-selected="false"
+                    >
+                      Statistic List
+                    </button>
+                  </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                  <!-- Favortie tab -->
+                  <div
+                    class="tab-pane fade show active my-3"
+                    id="favorites-tab-pane"
+                    role="tabpanel"
+                    aria-labelledby="favorites-tab"
+                    tabindex="0"
+                  >
+                    <!-- Content -->
+                    <form class="row g-3 needs-validation" novalidate>
+                      <div class="col-md-4">
+                        <label for="validationCustom01" class="form-label"
+                          >First name</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="validationCustom01"
+                          value="Mark"
+                          required
+                        />
+                        <div class="valid-feedback">Looks good!</div>
+                      </div>
+                      <div class="col-md-4">
+                        <label for="validationCustom02" class="form-label"
+                          >Last name</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="validationCustom02"
+                          value="Otto"
+                          required
+                        />
+                        <div class="valid-feedback">Looks good!</div>
+                      </div>
+                      <div class="col-md-4">
+                        <label for="validationCustomUsername" class="form-label"
+                          >Username</label
+                        >
+                        <div class="input-group has-validation">
+                          <span class="input-group-text" id="inputGroupPrepend"
+                            >@</span
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="validationCustomUsername"
+                            aria-describedby="inputGroupPrepend"
+                            required
+                          />
+                          <div class="invalid-feedback">
+                            Please choose a username.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="validationCustom03" class="form-label"
+                          >City</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="validationCustom03"
+                          required
+                        />
+                        <div class="invalid-feedback">
+                          Please provide a valid city.
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <label for="validationCustom04" class="form-label"
+                          >State</label
+                        >
+                        <select
+                          class="form-select"
+                          id="validationCustom04"
+                          required
+                        >
+                          <option selected disabled value="">Choose...</option>
+                          <option>...</option>
+                        </select>
+                        <div class="invalid-feedback">
+                          Please select a valid state.
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <label for="validationCustom05" class="form-label"
+                          >Zip</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="validationCustom05"
+                          required
+                        />
+                        <div class="invalid-feedback">
+                          Please provide a valid zip.
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="invalidCheck"
+                            required
+                          />
+                          <label class="form-check-label" for="invalidCheck">
+                            Agree to terms and conditions
+                          </label>
+                          <div class="invalid-feedback">
+                            You must agree before submitting.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <button class="btn btn-primary" type="submit">
+                          Submit form
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+
+                  <!-- Favorite user-->
+                  <div
+                    class="tab-pane fade"
+                    id="favorite-users-tab-pane"
+                    role="tabpanel"
+                    aria-labelledby="favorite-users-tab"
+                    tabindex="0"
+                  >
+                    <div class="table-responsive">
+                      <table
+                        class="table table-striped table-hover table-borderless table-primary align-middle"
+                      >
+                        <thead class="table-light">
+                          <caption>
+                            Table Name
+                          </caption>
+                          <tr>
+                            <th>Column 1</th>
+                            <th>Column 2</th>
+                            <th>Column 3</th>
+                          </tr>
+                        </thead>
+                        <tbody class="table-group-divider">
+                          <tr class="table-primary">
+                            <td scope="row">Item</td>
+                            <td>Item</td>
+                            <td>Item</td>
+                          </tr>
+                          <tr class="table-primary">
+                            <td scope="row">Item</td>
+                            <td>Item</td>
+                            <td>Item</td>
+                          </tr>
+                        </tbody>
+                        <tfoot></tfoot>
+                      </table>
+                    </div>
+                  </div>
+
+
+                  <!-- Favorite user-->
+                  <div
+                    class="tab-pane fade"
+                    id="share-friend-tab-pane"
+                    role="tabpanel"
+                    aria-labelledby="share-friend-tab"
+                    tabindex="0"
+                  >
+                    <div class="table-responsive">
+                      <table
+                        class="table table-striped table-hover table-borderless table-primary align-middle"
+                      >
+                        <thead class="table-light">
+                          <caption>
+                            Table Name
+                          </caption>
+                          <tr>
+                            <th>Column 1</th>
+                            <th>Column 2</th>
+                            <th>Column 3</th>
+                          </tr>
+                        </thead>
+                        <tbody class="table-group-divider">
+                          <tr class="table-primary">
+                            <td scope="row">Item</td>
+                            <td>Item</td>
+                            <td>Item</td>
+                          </tr>
+                          <tr class="table-primary">
+                            <td scope="row">Item</td>
+                            <td>Item</td>
+                            <td>Item</td>
+                          </tr>
+                        </tbody>
+                        <tfoot></tfoot>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </section>
   </body>
 
   <!-- Bootstrap -->
-  <script src="/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Custom JS -->
-  <script src="/assets/js/dashboard.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
 </html>
