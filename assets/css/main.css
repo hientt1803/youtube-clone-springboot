@@ -152,9 +152,16 @@ header {
   white-space: nowrap;
 }
 
-.new-video {
-  width: 100%;
-  aspect-ratio: 16.9;
+/* =============== Recomment video */
+.recoment-newVideo {
+  max-width: 540px;
+  max-height: 120px;
+}
+
+@media (max-width: 800px) {
+  .recoment-newVideo {
+    max-height: 500px;
+  }
 }
 
 /* =============== pagination =============== */
