@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang chủ</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css" />
+
+    <!-- Font awesome -->
+    <script
+      src="https://kit.fontawesome.com/c0f581682c.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/main.css" />
+  </head>
+  <body class="d-flex justify-content-center align-items-center" style="width: 100wh; height: 100vh;">
+    <div class="container-fluid">
+      <!-- Main concept -->
+      <main>
+        <div class="container shadow-lg p-3 rounded-2" style="max-width: 400px">
+          <form action="LoginServlet" method="post">
+            <h2 class="fw-bold mb-3 text-center">Login</h2>
+            <mark>${message}</mark>
+            <div class="form-group mb-3">
+              <label for="username">Username</label>
+              <input
+                type="text"
+                class="form-control"
+                name="username"
+                id="username"
+                placeholder="Enter username"
+                value="${username}"
+              />
+            </div>
+            <div class="form-group mb-3">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                class="form-control"
+                name="password"
+                id="password"
+                placeholder="Enter password"
+                value="${password}"
+              />
+            </div>
+            <input type="checkbox" id="remember" name="remember" />
+            <label for="remember">Remember me?</label> <br />
+            <button type="submit" class="btn btn-primary btn-block mt-3">
+              Submit
+            </button>
+          </form>
+        </div>
+      </main>
+    </div>
+  </body>
+
+  <!-- Bootstrap -->
+  <script src="../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom JS -->
+</html>
